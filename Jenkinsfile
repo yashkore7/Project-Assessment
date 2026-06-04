@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t devops-node-app:latest .'
+                sh 'docker build -t devops-node-app:old - latest .'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
                 docker run -d \
                   --name devops-node-app \
                   -p 3000:3000 \
-                  devops-node-app:latest
+                  devops-node-app:old - latest
                 '''
             }
         }

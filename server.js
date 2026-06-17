@@ -27,7 +27,9 @@ app.use((req, res) => {
     error: "Route not found"
   });
 });
-                       
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});                       
 
 {
   "name": "devops-node-app",
@@ -40,8 +42,5 @@ app.use((req, res) => {
     "express": "^4.21.0"
   }
 }
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 

@@ -28,7 +28,7 @@ pipeline {
                 sh '''
                 docker run -d \
                   --name devops-node-app \
-                  -p 3000:3000 \
+                  -p 3000:5000 \
                   devops-node-app:latest
                 '''
             }

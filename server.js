@@ -5,10 +5,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.get("/", (req, res) => {
   res.status(200).json({
-        application: "devops-node-app",
-    status: "running",
-    environment: process.env.NODE_ENV || "development"
-  });
+  application: "devops-node-app",
+  status: "running",
+  environment: process.env.NODE_ENV || "development"
+});
 });
 
 app.get("/health", (req, res) => {

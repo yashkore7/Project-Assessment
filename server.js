@@ -26,7 +26,7 @@ app.use((req, res) => {
 });
                        
 {
-  "name": "devops-node-app",
+  "name":"devops-node-app"
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {

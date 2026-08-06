@@ -8,6 +8,5 @@ if (result === expected) {
   process.exit(0);
 } else {
   console.error(`✗ Test Failed: Expected ${expected}, got ${result}`);
-  process.exit(0);
+  process.exit(1);
 }
-

@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+
+        stage('Run Application') {
+            steps {
+                sh 'npm start &'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+
+        success {
+            echo 'Build and tests passed successfully!'
+        }
+
+        failure {
+            echo 'Build or tests failed!'
+        }
+    }
+}

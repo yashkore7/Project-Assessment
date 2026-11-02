@@ -1,7 +1,7 @@
 console.log("Running application tests...");
 
-const expected = 12;
-const result = 5 + 7;
+const expected = 19;
+const result = 9 + 10;
 
 if (result === expected) {
   console.log(`✓ Test Passed: ${result}`);
@@ -9,4 +9,4 @@ if (result === expected) {
 } else {
   console.error(`✗ Test Failed: Expected ${expected}, got ${result}`);
   process.exit(1);
-}
+}xxxx
